@@ -143,17 +143,6 @@ def tipifica_variables(dataframe: pd.DataFrame, umbral_categoria: int, umbral_co
     except Exception as e:
         print(f"Error en la función tipifica_variable: {e}")
 
-print(describe_df(dataframe))
-
-print(tipifica_variables(dataframe, 30, 10.0))
-
-
-
-
-
-
-
-
 
 def get_features_num_regression(data, target_col, umbral_corr, pvalue=None):
     """
@@ -720,3 +709,17 @@ def plot_features_cat_regression ( data, target_col = "", columns = [], p_value 
 
     except Exception as e:
         print(f"Error en la función plot_feautures-cat_regression: {e}")        
+
+
+print(describe_df(dataframe))
+
+print(tipifica_variables(dataframe, 30, 10.0))
+
+print(get_features_num_regression(data = dataframe, umbral_corr= 1,target_col = 'age'))
+
+print(plot_features_num_regression(data = dataframe, umbral_corr= 1,target_col = 'age'))
+
+print(get_features_cat_regression(dataframe, target_col= 'Price'))
+
+print(plot_features_cat_regression (dataframe, target_col= 'age', columns= ['pclass', 'sibsp', 'parch', 'embarked', 'class', 'who', 'deck', 'embark_town',
+'survived', 'sex', 'adult_male', 'alive', 'alone']))
