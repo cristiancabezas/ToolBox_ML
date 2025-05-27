@@ -141,13 +141,6 @@ def tipifica_variables(dataframe: pd.DataFrame, umbral_categoria: int, umbral_co
     except Exception as e:
         print(f"Error en la función tipifica_variable: {e}")
 
-<<<<<<< Updated upstream
-=======
-
-
-
-
->>>>>>> Stashed changes
 
 def get_features_num_regression(data, target_col, umbral_corr, pvalue=None):
     """
