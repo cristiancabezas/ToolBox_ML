@@ -5,8 +5,6 @@ import seaborn as sns
 from scipy.stats import pearsonr
 
 
-dataframe = pd.read_csv("titanic.csv", encoding="utf-8")
-
 
 def describe_df(dataframe: pd.DataFrame):
     """
@@ -143,6 +141,13 @@ def tipifica_variables(dataframe: pd.DataFrame, umbral_categoria: int, umbral_co
     except Exception as e:
         print(f"Error en la función tipifica_variable: {e}")
 
+<<<<<<< Updated upstream
+=======
+
+
+
+
+>>>>>>> Stashed changes
 
 def get_features_num_regression(data, target_col, umbral_corr, pvalue=None):
     """
