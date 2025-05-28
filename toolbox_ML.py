@@ -297,10 +297,9 @@ def plot_features_num_regression(data, target_col = '', columns = [], umbral_cor
             if abs(corr) < umbral_corr:
                 if pvalue is None or p <= (1 - pvalue):
                     lista.append(x)
-        data_pairplot = lista + [target_col] # si no es por lista da error (unir diferentes listas)
 
         for x in range(0, len(lista), 4):
-            columnas = lista[x:x+4] + [target_col]
+            columnas = lista[x:x+4] + [target_col] # si no es por lista da error (unir diferentes listas)
             sns.pairplot(data[columnas])
             plt.show()
         
